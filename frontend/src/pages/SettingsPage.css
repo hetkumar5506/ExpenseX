@@ -1,0 +1,78 @@
+/* File: src/pages/SettingsPage.css */
+/* ACTION: Replace the ENTIRE file content with this. */
+
+.settings-page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.settings-page-container h1 { 
+    color: var(--text-primary); 
+}
+.settings-subheader { 
+    color: var(--text-secondary); 
+    margin-top: -1rem; 
+    margin-bottom: 2rem;
+}
+
+.settings-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.settings-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: sticky;
+    top: 90px; /* Below the main navbar */
+}
+
+.settings-nav button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    color: var(--text-secondary);
+}
+
+.settings-nav button svg {
+    font-size: 1.2rem;
+}
+
+.settings-nav button:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.settings-nav button.active {
+    background-color: var(--brand-primary);
+    color: white;
+    font-weight: 600;
+}
+
+.settings-nav button.danger-nav:hover,
+.settings-nav button.danger-nav.active {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+.dark .settings-nav button.danger-nav:hover,
+.dark .settings-nav button.danger-nav.active {
+    background-color: #450a0a;
+    color: #fca5a5;
+}
+
+/* This is the main content area that holds the animated card */
+.settings-content-area {
+    min-height: 400px;
+}

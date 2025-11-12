@@ -1,0 +1,50 @@
+/* File: src/components/errors/ServerError/ServerError.css */
+/* ACTION: Create this new folder and file. */
+
+.server-error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 100%; /* Fills the content area */
+}
+
+.server-error-card {
+    max-width: 450px;
+    text-align: center;
+}
+
+.server-error-icon {
+    font-size: 3.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.server-error-title {
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    margin: 0 0 1rem 0;
+}
+
+.server-error-message {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.server-error-retry-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--brand-primary);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.server-error-retry-button:hover {
+    transform: translateY(-3px);
+}

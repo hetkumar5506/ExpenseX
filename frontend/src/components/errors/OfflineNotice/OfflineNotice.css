@@ -1,0 +1,35 @@
+/* File: src/components/errors/OfflineNotice/OfflineNotice.css */
+/* ACTION: Create this new folder and file. */
+
+.offline-notice-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ef4444; /* A strong red color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 9999; /* Make sure it's on top of everything */
+    gap: 1rem;
+}
+
+.offline-icon {
+    font-size: 1.5rem;
+}
+
+.offline-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.offline-text strong {
+    font-weight: 600;
+}
+
+.offline-text span {
+    font-size: 0.9rem;
+}

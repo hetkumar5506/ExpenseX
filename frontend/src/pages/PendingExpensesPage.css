@@ -1,0 +1,20 @@
+/* File: src/pages/PendingExpensesPage.css */
+/* ACTION: Replace the ENTIRE file content. */
+
+.pending-page-container { max-width: 800px; margin: 0 auto; }
+.pending-page-container h1 { color: var(--text-primary); }
+.pending-page-container p { color: var(--text-secondary); }
+.pending-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.pending-card-editable { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-left: 5px solid #f59e0b; transition: box-shadow 0.2s; border: 1px solid var(--border-color); }
+.pending-card-editable:hover { box-shadow: 0 8px 15px rgba(0,0,0,0.07); }
+.editable-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem; }
+.form-group-inline { display: flex; flex-direction: column; }
+.form-group-inline label { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.25rem; font-weight: 600; }
+.form-group-inline input, .form-group-inline select { width: 100%; padding: 0.65rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; background-color: var(--bg-secondary); color: var(--text-primary); }
+.form-group-inline input:focus, .form-group-inline select:focus { outline: none; border-color: var(--brand-primary); background-color: var(--bg-card); }
+.pending-actions { display: flex; gap: 1rem; justify-content: flex-end; padding-top: 1rem; border-top: 1px solid var(--border-color); }
+.pending-actions button { padding: 0.6rem 1.2rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: transform 0.2s; }
+.pending-actions button:hover { transform: translateY(-2px); }
+.btn-confirm { background-color: #16a34a; color: white; }
+.btn-delete { background-color: #fee2e2; color: #991b1b; }
+.no-pending-card { text-align: center; padding: 3rem; background-color: var(--bg-card); border-radius: 12px; color: var(--text-secondary); border: 1px dashed var(--border-color); }

@@ -1,0 +1,27 @@
+/* frontend/src/styles/variables.css */
+:root {
+  /* Light Mode Colors */
+  --light-bg: #F5F7FA;
+  --light-card: #FFFFFF;
+  --light-text-primary: #1A1A1A;
+  --light-text-secondary: #555555;
+  --light-accent-1: #4E4BE8;
+  --light-accent-2: #88d3ce;
+  --light-button-bg: #E3E3E3;
+  --light-notification: #4E4BE8;
+  --light-divider: #DADADA;
+
+  /* Dark Mode Colors */
+  --dark-bg: #0F0F1F;
+  --dark-card: #121223;
+  --dark-text-primary: #FFFFFF;
+  --dark-text-secondary: #CCCCCC;
+  --dark-accent-1: #6e45e2;
+  --dark-accent-2: #88d3ce;
+  --dark-button-bg: #272727;
+  --dark-notification: #941553;
+  --dark-divider: #2C2C3C;
+
+  /* Fonts */
+  --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}

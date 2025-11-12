@@ -1,0 +1,175 @@
+/* File: src/components/layout/Navbar.css */
+/* ACTION: Replace the ENTIRE file content with this. */
+
+.navbar {
+  height: 70px;
+  background-color: var(--bg-primary);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+}
+
+/* 1. Logo */
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: bold;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+.logo-icon {
+  color: var(--brand-primary);
+  margin-right: 10px;
+}
+
+/* 2. Search */
+.nav-search {
+  flex-grow: 1;
+  min-width: 200px;
+  max-width: 600px;
+}
+.nav-search form {
+  position: relative;
+  width: 100%;
+}
+.nav-search input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  padding: 0 20px 0 45px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: all 0.2s;
+}
+.nav-search input:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+  background-color: var(--bg-card);
+  box-shadow: 0 0 0 2px var(--brand-primary-alpha); /* Assumes this variable exists or you can use rgba */
+}
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+/* 3. Links */
+.nav-links {
+  gap: 0.5rem;
+}
+.nav-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-link-item:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+.nav-link-item.active {
+  background-color: var(--brand-primary);
+  color: white;
+}
+
+/* 4. Actions */
+.nav-actions {
+  gap: 1rem;
+}
+.nav-scan-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--brand-primary);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s;
+  white-space: nowrap;
+}
+.nav-scan-button:hover {
+  transform: translateY(-2px);
+}
+.nav-icon-button {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  position: relative;
+  transition: background-color 0.2s;
+}
+.nav-icon-button:hover { background-color: var(--border-color); }
+.logout-button { color: #c62828; }
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(25%, -25%);
+    background-color: #d32f2f;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid var(--bg-primary); /* Helps it stand out against the icon */
+}
+
+/* --- NEW STYLE FOR POSITIONING THE DROPDOWN --- */
+.notification-container {
+    position: relative;
+}
+
+/* --- RESPONSIVE BEHAVIOR --- */
+@media (max-width: 1024px) {
+  .nav-link-item span, .nav-scan-button span {
+    display: none;
+  }
+  .navbar {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .navbar {
+    padding: 0 1rem;
+  }
+}

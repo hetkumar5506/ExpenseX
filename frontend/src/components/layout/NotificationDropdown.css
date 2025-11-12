@@ -1,0 +1,124 @@
+/* File: src/components/layout/NotificationDropdown.css */
+/* ACTION: Replace the ENTIRE file content with this. */
+
+.notification-dropdown {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 380px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+    overflow: hidden;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.notification-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.mark-all-read-btn {
+    background: none;
+    border: none;
+    color: var(--brand-primary);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.notification-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* --- NEW STYLES FOR THE RICH CONTENT --- */
+.notification-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    position: relative; /* For the unread indicator */
+}
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+/* Changed the unread indicator from a dot to a side-border */
+.notification-item.unread::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--brand-primary);
+}
+
+.notification-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-primary);
+    font-size: 1.2rem;
+}
+
+.notification-content {
+    flex-grow: 1;
+}
+
+.notification-title {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.notification-body {
+    margin: 0.25rem 0;
+    color: var(--text-primary);
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.notification-body strong {
+    font-weight: 600;
+}
+
+.notification-timestamp {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.notification-amount {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.no-notifications {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-secondary);
+}

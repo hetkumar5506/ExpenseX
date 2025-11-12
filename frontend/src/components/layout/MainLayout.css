@@ -1,0 +1,14 @@
+/* File: src/components/layout/MainLayout.css */
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f7f8fc;
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto; /* Allows content to scroll if it's too long */
+}

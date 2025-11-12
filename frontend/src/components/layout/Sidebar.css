@@ -1,0 +1,23 @@
+.sidebar {
+  background-color: var(--card-color); border-right: 1px solid var(--divider-color);
+  height: 100vh; position: fixed; left: 0; top: 0; z-index: 1000;
+  display: flex; flex-direction: column; box-shadow: 2px 0 15px rgba(0,0,0,0.05);
+}
+.sidebar-toggle-btn {
+  position: absolute; top: 18px; right: -15px; width: 30px; height: 30px; background-color: var(--card-color);
+  border: 1px solid var(--divider-color); border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-secondary);
+}
+.sidebar-header { height: 70px; display: flex; align-items: center; justify-content: center; }
+.sidebar-header h3 { font-size: 1.8rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; white-space: nowrap; margin: 0; }
+.sidebar-nav { list-style: none; padding: 0; margin: 20px 0; flex-grow: 1; }
+.sidebar-nav li a { display: flex; align-items: center; height: 50px; color: var(--text-secondary); font-weight: 500; border-left: 4px solid transparent; padding-left: 28px; white-space: nowrap; overflow: hidden; }
+.sidebar-nav li a:hover { background-color: var(--button-bg); }
+.sidebar-nav li a.active { color: var(--accent-1); border-left-color: var(--accent-1); }
+.sidebar-nav .icon { font-size: 1.3rem; flex-shrink: 0; width: 24px; text-align: center; }
+.sidebar-nav li a span { margin-left: 20px; }
+.sidebar-footer { padding: 20px; }
+.logout-button { width: 100%; height: 50px; background: none; border: 1px solid var(--divider-color); color: var(--text-secondary); border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; overflow: hidden; white-space: nowrap; }
+.logout-button .icon { margin: 0; }
+.logout-button span { margin-left: 20px; }
+@media (max-width: 900px) { .sidebar-toggle-btn { display: none; } /* ... other mobile styles */ }
