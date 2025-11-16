@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // File: src/components/layout/Navbar.js
 // ACTION: Replace the ENTIRE file content with this.
 
@@ -9,7 +10,7 @@ import { FaPiggyBank, FaSearch, FaHome, FaChartBar, FaCog, FaSignOutAlt, FaCamer
 import { motion, AnimatePresence } from 'framer-motion';
 import api from '../../api';
 import NotificationDropdown from './NotificationDropdown';
-
+import LogoutButton from './LogoutButton'; // make sure the path is correct
 const Navbar = () => {
     const { logout, dataVersion } = useAuth();
     const navigate = useNavigate();
@@ -122,9 +123,7 @@ const Navbar = () => {
                     </AnimatePresence>
                 </div>
 
-                <button onClick={logout} className="nav-icon-button logout-button" title="Logout">
-                    <FaSignOutAlt />
-                </button>
+                <LogoutButton onClick={logout} />
             </div>
         </motion.nav>
     );
