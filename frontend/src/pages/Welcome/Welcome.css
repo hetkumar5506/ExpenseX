@@ -152,3 +152,120 @@
 
 /* --- Footer --- */
 .main-footer { padding: 40px; text-align: center; color: var(--text-secondary); font-size: 0.9rem; border-top: 1px solid var(--border-color); }
+
+/* ------------------------- */
+/* 📱 RESPONSIVE FIXES START */
+/* ------------------------- */
+
+/* Small phones (max-width: 480px) */
+@media (max-width: 480px) {
+
+  .welcome-section {
+    padding: 60px 20px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta {
+    width: 100%;
+    padding: 14px 0;
+  }
+
+  .mock-app-window {
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .mock-app-body {
+    flex-direction: column;
+  }
+
+  .mock-sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .mock-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .mock-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+
+  .welcome-section {
+    padding: 80px 25px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 9vw, 4rem);
+  }
+
+  .mock-app-window {
+    height: 430px;
+  }
+
+  .mock-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-content {
+    padding: 20px;
+  }
+}
+
+/* Larger tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .welcome-section {
+    padding: 100px 30px;
+  }
+
+  .mock-app-window {
+    height: 480px;
+  }
+}
+
+/* ----------------------- */
+/* 📱 RESPONSIVE FIXES END */
+/* ----------------------- */

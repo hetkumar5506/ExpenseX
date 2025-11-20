@@ -12,3 +12,65 @@
 .auth-button:hover { transform: translateY(-2px); }
 .toggle-auth { margin-top: 1.5rem; color: var(--text-secondary); }
 .toggle-auth button { background: none; border: none; color: #4b6cb7; font-weight: bold; cursor: pointer; margin-left: 5px; font-size: 0.9rem; }
+
+/* -------------------------- */
+/* 📱 AUTH PAGE RESPONSIVE FIXES */
+/* -------------------------- */
+
+/* Phones: max-width 480px */
+@media (max-width: 480px) {
+
+  .auth-container {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .auth-card {
+    padding: 1.8rem;
+    max-width: 100%;
+    margin-top: 40px;
+    border-radius: 10px;
+  }
+
+  .auth-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .auth-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input {
+    padding: 0.65rem;
+    font-size: 0.95rem;
+  }
+
+  .auth-button {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .toggle-auth {
+    font-size: 0.9rem;
+  }
+
+  .toggle-auth button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets: max-width 768px */
+@media (max-width: 768px) {
+  .auth-card {
+    padding: 2rem;
+    max-width: 380px;
+  }
+
+  .auth-card h2 {
+    font-size: 2rem;
+  }
+}
