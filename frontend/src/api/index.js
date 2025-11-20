@@ -9,7 +9,8 @@ export const apiEvents = new EventTarget();
 
 // Your existing axios instance
 const api = axios.create({
-  baseURL: 'http://localhost:5050/api',
+  // baseURL: 'http://localhost:5050/api', for laptop
+  baseURL: 'http://192.168.1.3:5050/api', // for phone testing
   headers: {
     'Content-Type': 'application/json',
   },

@@ -59,7 +59,7 @@
   outline: none;
   border-color: var(--brand-primary);
   background-color: var(--bg-card);
-  box-shadow: 0 0 0 2px var(--brand-primary-alpha); /* Assumes this variable exists or you can use rgba */
+  box-shadow: 0 0 0 2px var(--brand-primary-alpha);
 }
 .search-icon {
   position: absolute;
@@ -129,35 +129,41 @@
   position: relative;
   transition: background-color 0.2s;
 }
-.nav-icon-button:hover { background-color: var(--border-color); }
-.logout-button { color: #c62828; }
-
-.notification-badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(25%, -25%);
-    background-color: #d32f2f;
-    color: white;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    font-size: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    border: 2px solid var(--bg-primary); /* Helps it stand out against the icon */
+.nav-icon-button:hover { 
+  background-color: var(--border-color); 
+}
+.logout-button { 
+  color: #c62828; 
 }
 
-/* --- NEW STYLE FOR POSITIONING THE DROPDOWN --- */
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(25%, -25%);
+  background-color: #d32f2f;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 2px solid var(--bg-primary);
+}
+
 .notification-container {
-    position: relative;
+  position: relative;
 }
 
 /* --- RESPONSIVE BEHAVIOR --- */
+
+/* Tablets and smaller screens */
 @media (max-width: 1024px) {
-  .nav-link-item span, .nav-scan-button span {
+  .nav-link-item span,
+  .nav-scan-button span {
     display: none;
   }
   .navbar {
@@ -165,11 +171,44 @@
   }
 }
 
+/* Mobile phones */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
+
+  /* Hide logo text but keep icon */
+  .nav-logo a span {
+    display: none;
+  }
+
+  /* Search bar grows to fill remaining space */
+  .nav-search {
+    flex-grow: 1;
+    min-width: 80px;
+    max-width: none;
+  }
+  .nav-search input {
+    padding-left: 35px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  /* Navbar tighter padding */
   .navbar {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+    flex-wrap: nowrap;
+  }
+
+  /* Actions closer together */
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  /* Slightly smaller notification badge */
+  .notification-badge {
+    width: 16px;
+    height: 16px;
+    font-size: 0.65rem;
   }
 }

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import api from '../../api';
 import './SettingsForms.css';
+import AnimatedDeleteButton from "./AnimatedDeleteButton";
 
 const DeleteAccount = () => {
     const { logout } = useAuth();
@@ -31,7 +32,7 @@ const DeleteAccount = () => {
         <div className="danger-zone">
             <h2>Delete Account</h2>
             <p>Once you delete your account, there is no going back. Please be certain.</p>
-            <button className="btn-danger" onClick={() => setIsModalOpen(true)}>Delete your account</button>
+            <AnimatedDeleteButton onClick={() => setIsModalOpen(true)} />
 
             {isModalOpen && (
                 <div className="modal-overlay">

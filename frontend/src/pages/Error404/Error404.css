@@ -1,58 +1,64 @@
-/* File: src/pages/Error404/Error404.css */
-/* ACTION: Replace the ENTIRE file content with this. */
+.error-loader-wrapper {
+  width: 12rem; /* Matches loader size */
+  margin: 0 auto 2rem auto;
+}
 
 .error-page-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: var(--bg-secondary);
-    text-align: center;
-    padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+  text-align: center;
+  padding: 2rem;
 }
 
 .error-card {
-    max-width: 500px;
+  max-width: 500px;
+  background: var(--bg-primary);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .error-icon {
-    font-size: 4rem;
-    color: #f59e0b; /* A warning yellow color */
-    margin-bottom: 1.5rem;
+  font-size: 3rem;
+  color: #f59e0b; /* warning yellow */
+  margin-bottom: 1rem;
 }
 
 .error-code {
-    font-size: 6rem;
-    font-weight: 800;
-    color: var(--text-primary);
-    margin: 0;
-    line-height: 1;
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1;
 }
 
 .error-title {
-    font-size: 2rem;
-    color: var(--text-primary);
-    margin: 0.5rem 0 1rem 0;
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin: 0.5rem 0 1rem 0;
 }
 
 .error-message {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 2rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 .error-home-button {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    background-color: var(--brand-primary);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 8px;
-    transition: transform 0.2s;
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: var(--brand-primary);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.2s;
 }
 
 .error-home-button:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
 }
